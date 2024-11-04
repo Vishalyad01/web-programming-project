@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Reservation</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #e20e0e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  form {
+    display: grid;
+    gap: 1rem;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="time"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  button[type="submit"] {
+    background-color: #333;
+    color: rgb(237, 237, 237);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #e11a1a;
+    color: white;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Make a Reservation</h1>
+  </header>
+  <main>
+    <form id="reservation-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" name="guests" required>
+
+      <label for="special-requests">Special Requests:</label>
+      <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+
+      <button type="submit">Make Reservation</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2023 Your Restaurant. All rights reserved.</p>
+  </footer>
+</body>
+</html>

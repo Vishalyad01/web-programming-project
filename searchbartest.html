@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Bar with Links and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #search-container {
+            text-align: center;
+            padding: 100px;
+        }
+
+        #search-form {
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            overflow: hidden;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #search-input {
+            border: none;
+            padding: 10px;
+            width: 200px;
+        }
+
+        #search-submit {
+            background-color: #000000;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #search-results {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .result-link {
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .result-link:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="search-box">
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search Restaurant's">
+            <button type="submit" id="search-submit">Search</button>
+        </form>
+
+        <div id="search-results">
+            <!-- Search results will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const searchTerm = document.getElementById("search-input").value;
+            const searchResults = document.getElementById("search-results");
+
+            // Clear previous search results
+            searchResults.innerHTML = "";
+
+            // Simulate search results based on the search term
+            const results = getSearchResults(searchTerm);
+
+            // Display search results as links
+            results.forEach(result => {
+                const resultLink = document.createElement("a");
+                resultLink.href = result.url;
+                resultLink.textContent = result.title;
+                resultLink.classList.add("result-link");
+                searchResults.appendChild(resultLink);
+            });
+        });
+
+        // Simulated search results data
+        function getSearchResults(searchTerm) {
+            // Simulated results
+            const results = [
+                { title: "Example Result 1", url: "https://www.example.com/result1" },
+                { title: "Example Result 2", url: "https://www.example.com/result2" },
+                { title: "Example Result 3", url: "https://www.example.com/result3" }
+            ];
+
+            return results.filter(result =>
+                result.title.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+        }
+    </script>
+</body>
+</html>

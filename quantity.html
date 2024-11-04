@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Design</title>
+    <style>
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .inset-y-0 {
+            top: 0;
+            bottom: 0;
+        }
+
+        .left-0 {
+            left: 0;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .pl-2 {
+            padding-left: 0.5rem;
+        }
+
+        .h-5 {
+            height: 1.25rem;
+        }
+
+        .w-5 {
+            width: 1.25rem;
+        }
+
+        .fill-slate-300 {
+            fill: #718096; /* Replace with your desired color */
+        }
+
+        .block {
+            display: block;
+        }
+
+        .bg-white {
+            background-color: #ffffff; /* Replace with your desired color */
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .border {
+            border: 1px solid #e2e8f0; /* Replace with your desired color */
+        }
+
+        .rounded-md {
+            border-radius: 0.375rem; /* Adjust as needed */
+        }
+
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .pl-9 {
+            padding-left: 2.25rem;
+        }
+
+        .pr-3 {
+            padding-right: 0.75rem;
+        }
+
+        .shadow-sm {
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Adjust as needed */
+        }
+
+        .focus:outline-none:focus {
+            outline: none;
+        }
+
+        .focus:border-sky-500:focus {
+            border: 1px solid #3b82f6; /* Replace with your desired color */
+        }
+
+        .focus:ring-sky-500:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Replace with your desired color */
+        }
+
+        .focus:ring-1:focus {
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); /* Adjust as needed */
+        }
+
+        .sm:text-sm {
+            font-size: 0.875rem; /* Adjust as needed */
+        }
+
+        /* Custom CSS for the label text (placeholder) */
+        .placeholder::placeholder {
+            font-style: italic;
+            color: #a0aec0; /* Replace with your desired color */
+        }
+    </style>
+</head>
+<body>
+    <label class="relative block">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><!-- ... --></svg>
+        </span>
+        <input class="block bg-white w-full border rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Select quantity" type="text" name="search" oninput="updateQuantity(this.value)" />
+    </label>
+    <script>
+        function updateQuantity(quantity) {
+            alert(`Selected Quantity: ${quantity}`);
+        }
+    </script>
+</body>
+</html>

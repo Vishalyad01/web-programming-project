@@ -1,0 +1,796 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+  <title>Flavour fiesta</title>
+  <section>
+
+      <title>Search Bar with Links and CSS</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+          }
+  
+          #search-container {
+              text-align: center;
+              padding: 100px;
+          }
+  
+          #search-form {
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 0px;
+              overflow: hidden;
+              box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+          }
+  
+          #search-input {
+              border: none;
+              padding: 10px;
+              width: 200px;
+          }
+  
+          #search-submit {
+              background-color:black;
+              border: black;
+              color:white;
+              padding: 10px 20px;
+              cursor: pointer;
+          }
+  
+          #search-results {
+              text-align: center;
+              margin-top: 20px;
+          }
+  
+          .result-link {
+              display: block;
+              margin: 10px;
+              padding: 10px;
+              background-color: #f4f4f4;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              text-decoration: none;
+              color: #333;
+              transition: background-color 0.3s ease-in-out;
+          }
+  
+          .result-link:hover {
+              background-color: #ddd;
+          }
+      </style>
+  </head>
+  <body>
+      <div id="search-box">
+          <form id="search-form">
+              <input type="text" id="search-input" placeholder="Search Restaurant's">
+              <button type="submit" id="search-submit">Search</button>
+          </form>
+  
+          <div id="search-results">
+              <!-- Search results will be displayed here -->
+          </div>
+      </div>
+      &nbsp;
+      
+      
+      
+      <script>
+          document.getElementById("search-form").addEventListener("submit", function(event) {
+              event.preventDefault(); // Prevent form submission
+  
+              const searchTerm = document.getElementById("search-input").value;
+              const searchResults = document.getElementById("search-results");
+  
+              // Clear previous search results
+              searchResults.innerHTML = "";
+  
+              // Simulate search results based on the search term
+              const results = getSearchResults(searchTerm);
+  
+              // Display search results as links
+              results.forEach(result => {
+                  const resultLink = document.createElement("a");
+                  resultLink.href = result.url;
+                  resultLink.textContent = result.title;
+                  resultLink.classList.add("result-link");
+                  searchResults.appendChild(resultLink);
+              });
+          });
+  
+          // Simulated search results data
+          function getSearchResults(searchTerm) {
+              // Simulated results
+              const results = [
+                  { title: "Aurora Restaurant", url: "aurora.html" },
+                  { title: "Delight Restaurant", url: "delight.html" },
+                  { title: "Indo Restaurant", url: "indo.html" }
+              ];
+  
+              return results.filter(result =>
+                  result.title.toLowerCase().includes(searchTerm.toLowerCase())
+              );
+          }
+      </script>
+  
+    
+  </p>
+</section>
+  <link rel="stylesheet" href="ind.css">
+</head>
+<body>
+  
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <header>
+                
+           
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+
+      
+          
+           <a href="index.html" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank" style="background-color:#cd0000; padding: 5px 10px; border-radius: 5px; text-decoration: none; color: #ffffff;;">HomePage</a>
+
+
+            
+            &nbsp;
+            &nbsp;
+            
+           <a href="about.html" class="text-white-600 ml-1" rel="noopener noreferrer" target="_blank" style="background-color:#cd0000; padding: 5px 10px; border-radius: 5px; text-decoration: white; color: #ffffff;">About</a>
+
+            
+            &nbsp;
+            &nbsp;
+            
+            <a href="services.html" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank" style="background-color:#cd0000; padding: 5px 10px; border-radius: 5px; text-decoration: none; color: #ffffff;">Services</a>
+
+            
+            
+
+            &nbsp;
+            &nbsp;
+            <a href="cuopencode.html" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank" style="background-color:#cd0000; padding: 5px 10px; border-radius: 5px; text-decoration: none; color: #ffffff;;">Today's Offer</a>
+
+            
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Your belly knows best.
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+              <hr>
+
+              
+              <section
+               class="text-gray-600 body-font">
+                <hr>
+                <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                  
+                  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                    <h5 class style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">FLAVOUR_FIESTA
+                    <h6 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Hi Foodie, What's your pick?
+                      <hr>
+                    &nbsp;
+                     
+                      <a href="tasteofluxury.html" class="inline-flex text-white bg-green-500 border-0 py-4 px-12 focus:outline-none hover:bg-red-600 rounded text-lg">A taste of luxury</a>
+
+                      
+                      <hr>
+                    </div>
+                    <section>
+                
+                    </section>
+                    <hr>
+                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                        <img class="object-cover object-center big " alt="hero" src="https://source.unsplash.com/700x550/?restaurant,icecream">
+                  </div>
+                  <section>
+
+                  </section>
+                  <hr>
+                </div>
+                <hr>
+                <section></section>
+                </div>
+                
+                
+                <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center"></nav>
+                <h2 class="text-white-900 title-font text-lg font">&nbsp; Available Restaurant's </h2>
+                <h5 class="text-white-900 title-font text-lg font">&nbsp;(Under 25km of your precise location)</h5>
+                
+                  
+                  
+            
+                  </div>
+                  <section class="text-gray-600 body-font">
+                    <div class="container px-5 py-24 mx-auto">
+                      <div class="flex flex-wrap -m-4">
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?food,snacks">
+                          </a>
+                        </form>
+                        <p>
+                          <a href="aurora.html">Check Out</a>
+
+                          
+                        </p>
+                      
+                    
+            
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Aurora Restaurant</h2>
+                            <p class="mt-1">5km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?dishes,tea">
+                          </a>
+                        </form>
+                        <p>
+                          <a href="delight.html">Check Out</a>
+                        </p>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Delight Restaurant</h2>
+                            <p class="mt-1">7km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?lunch,briyani">
+                          </a>
+                          </form>
+                          <p>
+                            <a href="indo.html">Check Out</a>
+                            </p>
+                          <div class="mt-4">
+                            
+                           
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Indo Restaurant</h2>
+                            <p class="mt-1">19km Away</p>
+                          </div>
+                         
+                        </div>
+                        
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?dinner,chicken">
+                          </a>
+                        </form>
+                        <p>
+                          <a href="shine.html">Check Out</a>
+                        </p>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">3★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Shine Restaurant</h2>
+                            <p class="mt-1">13km Away</p>
+                          </div>
+                        </div>
+                        
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?meal,noodles">
+                          </a>
+                          </form>
+                          <p>
+                          <a href="Topia.html">Check Out</a>
+                        </p>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Topia Restaurant</h2>
+                            <p class="mt-1">14km Away</p>
+                          </div>
+                          
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                           <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?burger">
+                          </a>
+                        </form>
+                        <p>
+                          <a href="Topia.html">Check Out</a>
+                        </p>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">3★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Yeta Restaurant</h2>
+                            <p class="mt-1">11km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?coffee,coldrinks">
+                            </a>
+                            <form>
+                              <p>
+                            <a href="butterfly.html">Check Out</a>
+                              </p>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Butterfly Restaurant</h2>
+                            <p class="mt-1">6km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?fastfood,rooms">
+                          </a>
+                          <form>
+                            <p>
+                            <a href="flame.html">Check Out</a>
+                            </p>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Flame Restaurant</h2>
+                            <p class="mt-1">4km Away</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <hr>
+
+                  </div>
+                  <section class="text-gray-600 body-font">
+                    <div class="container px-5 py-24 mx-auto">
+                      <div class="flex flex-wrap -m-4">
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?snacks">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Beveo.html">Check Out</a>
+                              </p>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Beveo Restaurant</h2>
+                            <p class="mt-1">8km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?tea">
+                            </a>
+                            <form>
+                            <p>
+                              <a href="Tanito.html">Check Out</a>
+                            </p>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Tanito Restaurant</h2>
+                            <p class="mt-1">7km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?briyani">
+                          </a>
+                          <form>
+                            <p>
+                          <a href="delicio.html">Check Out</a>
+                          </p>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Delicio Restaurant</h2>
+                            <p class="mt-1">9km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?chicken">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Ivi.html">Check Out</a>
+                        </p>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">3★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Ivi Restaurant</h2>
+                            <p class="mt-1">3km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?noodles">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Peacez.html">Check Out</a>
+                            </p>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Peacez Restaurant</h2>
+                            <p class="mt-1">14km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?drinks">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Eat&Fun.html">Check Out</a>
+                            </p>
+                          </form>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">3★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Eat & Fun Restaurant</h2>
+                            <p class="mt-1">17km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?coffee">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Yes.html">Check Out</a>
+                            </p>
+                          </form>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Yes Restaurant</h2>
+                            <p class="mt-1">21km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?fastfood">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Amor.html">Check Out</a>
+                            </p>
+                          </form>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Amor Restaurant</h2>
+                            <p class="mt-1">24km Away</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <hr>
+                  <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center"></nav>
+                <h2 class="text-white-900 title-font text-lg font">&nbsp;Trending</h2>
+                <h5 class="text-white-900 title-font text-lg font">&nbsp;Restaurant's</h5>
+                  <section class="text-white-600 body-font">
+                    <div class="container px-5 py-24 mx-auto">
+                      <div class="flex flex-wrap -m-4">
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?meat,coldrinks">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Duke's.html">Check Out</a>
+                            </p>
+                          </form>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Duke's Table Restaurant</h2>
+                            <p class="mt-1">5km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?vanilla,coldrinks">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Palm&Pine.html">Check Out</a>
+                            </p>
+                          </form>
+                      
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium"> Palm & Pine Restaurant</h2>
+                            <p class="mt-1">9km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?mutton,coldrinks">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Oman.html">Check Out</a>
+                            </p>
+                          </form>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Oman Restaurant</h2>
+                            <p class="mt-1">11km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?food,coldrinks">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Divine.html">Check Out</a>
+                            </p>
+                          </form>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Divine Restaurant</h2>
+                            <p class="mt-1">17km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?noodles,coldrinks">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Paradise.html">Check Out</a>
+                            </p>
+                          </form>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">3★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Paradise Restaurant</h2>
+                            <p class="mt-1">19km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?biscuits,coldrinks">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Asian.html">Check Out</a>
+                            </p>
+                          </form>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Asian Restaurant</h2>
+                            <p class="mt-1">8km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?sweets,coldrinks">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Tamilian.html">Check Out</a>
+                            </p>
+                          </form>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Tamilian Restaurant</h2>
+                            <p class="mt-1">10km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?chocolates,coldrinks">
+                          </a>
+                          <form>
+                            <p>
+                              <a href="Hardy's.html">Check Out</a>
+                            </p>
+                          </form>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Hardy's Restaurant</h2>
+                            <p class="mt-1">25km Away</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <hr>
+                </form>
+            </head>
+            <body>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center"></nav>
+                <h2 class="text-gray-900 title-font text-lg font">&nbsp;RESTAURANT'S CLOSED AT THE &nbsp;MOMENT</h2>
+                <h5 class="text-gray-900 title-font text-lg font">&nbsp;(Opening by Tomorrow 10:00)</h5>
+              
+                </form>
+            </head>
+            <body>
+                <header class="text-gray-1000 body-font">
+                    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                        <header>
+
+                  <section class="text-gray-600 body-font">
+                    <div class="container px-5 py-24 mx-auto">
+                      <div class="flex flex-wrap -m-4">
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?fish,coldrinks">
+                          </a>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">King's Restaurant</h2>
+                            <p class="mt-1">3km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?pizzahut">
+                          </a>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Pizza Hut</h2>
+                            <p class="mt-1">1km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?pizza">
+                          </a>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Domino's Pizza</h2>
+                            <p class="mt-1">5km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?timhortons">
+                          </a>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Tim Hortons</h2>
+                            <p class="mt-1">9km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?BurgerKing">
+                          </a>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">5★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Burger King</h2>
+                            <p class="mt-1">13km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?mcdonalds">
+                          </a>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">4★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">McDonald's</h2>
+                            <p class="mt-1">11km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?chocolates,macdonalds">
+                          </a>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">3★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">Fami Restaurant</h2>
+                            <p class="mt-1">4km Away</p>
+                          </div>
+                        </div>
+                        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                          <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/720x600/?kfc">
+                          </a>
+                          <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">3★</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">KFC</h2>
+                            <p class="mt-1">5km Away</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <hr>
+                  
+                </div>
+                <section class="text-gray-600 body-font">
+                    <div class="container px-5 py-24 mx-auto">
+                      <div class="flex flex-col text-center w-full mb-20">
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Team</h1>
+                        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">India's No.1 Restaurant's Booking Platform Since 2002.</p>
+                      </div>
+                      <div class="flex flex-wrap -m-2">
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://source.unsplash.com/720x600/?chocolates,butter">
+                            <div class="flex-grow">
+                              <h2 class="text-gray-900 title-font font-medium">Rahul kumar</h2>
+                              <p class="text-gray-500">Founder</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                            <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://source.unsplash.com/720x600/?chocolates,ice">
+                            <div class="flex-grow">
+                              <h2 class="text-gray-900 title-font font-medium">Vishal yadav</h2>
+                              <p class="text-gray-500">UI Researcher</p>
+                            
+                  </section>
+                  <hr>
+
+                </div>
+                  <section class="text-gray-600 body-font relative">
+                  <hr>
+                    <div class="absolute inset-0 bg-gray-300">
+                      <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d110634.28959476872!2d76.79183641725174!3d30.723835484548573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1712425308497!5m2!1sen!2sin" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+                    </div>
+                    <div class="container px-5 py-24 mx-auto flex">
+                      <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+                        <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
+                        <p class="leading-relaxed mb-5 text-gray-600">Your opinion matter's, valuable to us</p>
+                        <div class="relative mb-4">
+                          <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                          <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        </div>
+                        <div class="relative mb-4">
+                          <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                          <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                        </div>
+                        <a href="feedbacksubmitted.html" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank"style="background-color:#ffffa0">SUBMIT</a>
+                        
+                      </div>
+                    </div>
+                  </section>
+                  <footer class="text-gray-600 body-font">
+                    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+                      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                        
+                       <img src="photo-1541963463532-d68292c34b19.jpeg" alt="all">
+                          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                        <span class="ml-3 text-xl">Flavour fiesta is now available on twitter </span>
+                      </a>
+                      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2024 Flavour fiesta T&C —
+                        <a href="https://twitter.com/tezvxx" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@Flavour_firsta's Twitter</a>
+                      
+              </section>
+              <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex items-center md:flex-row flex-col">
+    <div class="flex flex-col md:pr-10 md:mb-0 mb-6 pr-0 w-full md:w-auto md:text-left text-center">
+      
+    </div>
+    <div class="flex md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4">
+      <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 512 512">
+          <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+        </svg>
+        <span class="ml-4 flex items-start flex-col leading-none">
+          <span class="text-xs text-gray-600 mb-1">GET IT ON</span>
+          <span class="title-font font-medium">Google Play</span>
+        </span>
+      </button>
+      <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 305 305">
+          <path d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z"></path>
+          <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
+        </svg>
+        <span class="ml-4 flex items-start flex-col leading-none">
+          <span class="text-xs text-gray-600 mb-1">Download on the</span>
+          <span class="title-font font-medium">App Store</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+              <hr>
+            </svg>
+          </button>
+        </div>
+      </header>
+  <div class="prose">
+    <!-- ... -->
+  </div>
+</body>
+</html>
